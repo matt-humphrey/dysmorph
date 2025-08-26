@@ -1,23 +1,22 @@
 [project]
-name = "harmonise-pa"
+name = "dysmorph"
 version = "0.1.0"
-description = "Harmonise all variables for physical assessments."
+description = "Harmonise dysmorphology variables for physical assessments."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "banksia",
-    "polars>=1.31.0",
-    "pointblank>=0.11.6",
-    "pyarrow>=20.0.0",
-    "marimo>=0.14.17",
+    "polars>=1.32.0",
+    "pointblank>=0.12.0",
+    "pyarrow>=21.0.0",
 ]
 
 [dependency-groups]
 dev = [
     "altair>=5.5.0",
-    "marimo>=0.14.17",
+    "marimo>=0.15.0",
     "pytest>=8.4.1",
-    "ruff>=0.12.3",
+    "ruff>=0.12.10",
     "watchdog>=6.0.0",
 ]
 
@@ -44,7 +43,6 @@ exclude = ["docs", ".venv", "tests/*"]
 
 [tool.marimo.runtime]
 watcher_on_save = "autorun"
-output_max_bytes = 50_000_000
 
 [build-system]
 requires = ["hatchling"]
