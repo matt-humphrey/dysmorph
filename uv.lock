@@ -173,7 +173,6 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "banksia" },
-    { name = "marimo" },
     { name = "pointblank" },
     { name = "polars" },
     { name = "pyarrow" },
@@ -191,18 +190,17 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "banksia", editable = "../../../Projects/banksia" },
-    { name = "marimo", specifier = ">=0.14.17" },
-    { name = "pointblank", specifier = ">=0.11.6" },
-    { name = "polars", specifier = ">=1.31.0" },
-    { name = "pyarrow", specifier = ">=20.0.0" },
+    { name = "pointblank", specifier = ">=0.12.0" },
+    { name = "polars", specifier = ">=1.32.0" },
+    { name = "pyarrow", specifier = ">=21.0.0" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "altair", specifier = ">=5.5.0" },
-    { name = "marimo", specifier = ">=0.14.17" },
+    { name = "marimo", specifier = ">=0.15.0" },
     { name = "pytest", specifier = ">=8.4.1" },
-    { name = "ruff", specifier = ">=0.12.3" },
+    { name = "ruff", specifier = ">=0.12.10" },
     { name = "watchdog", specifier = ">=6.0.0" },
 ]
 
