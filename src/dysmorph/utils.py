@@ -4,8 +4,9 @@ from typing import Callable, TypeAlias
 
 import banksia as bk
 import polars as pl
-from harmonise_pa.config import INTERIM_DATA, RAW_DATA
 from polars import DataFrame
+
+from dysmorph.config import INTERIM_DATA, RAW_DATA
 
 __all__ = [
     "apply_pipeline",
@@ -24,7 +25,7 @@ def read_all_datasets(
 ) -> tuple[pl.DataFrame, pl.DataFrame]:
     "Read and merge all datasets."
     lfs, metas = [], []
-    for dset in datasets:
+    for dset in datasets.values():
         variables = dset["variables"]
         rename = dset["rename"]
         input_cols = variables + list(rename.keys())
